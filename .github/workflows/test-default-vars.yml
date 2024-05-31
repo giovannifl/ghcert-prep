@@ -14,14 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check2
-        env:
-          GITHUB_EVENT_NAME: $GITHUB_EVENT_NAME
-          GITHUB_JOB: $GITHUB_JOB
-          GITHUB_OUTPUT: $GITHUB_OUTPUT
-          GITHUB_PATH: $GITHUB_PATH
         run: |
           echo "event_name: $GITHUB_EVENT_NAME"
           echo "job: $GITHUB_JOB"
           echo "output: $GITHUB_OUTPUT"
           echo "path: $GITHUB_PATH"
-          echo "os: $RUNNER_OS"   
+          echo "os: $RUNNER_OS"
+          echo "environment: ${{runner.environment}}"   
