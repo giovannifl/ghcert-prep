@@ -1,0 +1,15 @@
+name: Test default variables
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest   
+    steps:
+      - name: check
+        run: echo "GITHUB_Repository $GITHUB_REPOSITOR"
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check2
+        run: echo ${{ github.base_ref}}     
