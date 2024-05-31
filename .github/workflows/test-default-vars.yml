@@ -12,4 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check2
-        run: echo ${{ github.base_ref}}     
+        run: |
+          echo ${{ github.base_ref}}
+          echo ${{ github.env}}     
