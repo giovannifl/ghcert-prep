@@ -15,7 +15,7 @@ jobs:
   Job-02:
     runs-on: ubuntu-latest
     steps:
-        - if: ${{ github.action }} == 'push'
+        - if: ${{ github.event_name }} == 'push'
           name: Set the value
           id: step_one
           run: |

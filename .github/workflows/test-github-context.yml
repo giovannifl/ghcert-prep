@@ -1,6 +1,6 @@
-name: This is an example
+name: GitHub Dump
 
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   one:
