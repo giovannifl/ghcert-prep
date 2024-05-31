@@ -14,4 +14,4 @@ jobs:
       - name: check2
         run: |
           echo ${{ github.base_ref}}
-          echo ${{ github.env}}     
+          echo ${{ github.event_name}}     
