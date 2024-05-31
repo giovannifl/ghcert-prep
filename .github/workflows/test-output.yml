@@ -14,9 +14,9 @@ jobs:
             printf '%s\n' "$action_state" # This will output 'yellow'
   Job-02:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name }} == 'push'
     steps:
-        - if: ${{ github.event_name }} == 'push'
-          name: Set the value
+        - name: Set the value
           id: step_one
           run: |
             echo "state=red" >> "$GITHUB_ENV"
