@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest   
     steps:
       - name: check
-        run: echo "GITHUB_Repository $GITHUB_REPOSITOR"
+        run: echo "GITHUB_Repository $GITHUB_REPOSITORY"
   second_job:
     runs-on: ubuntu-latest
     steps:
