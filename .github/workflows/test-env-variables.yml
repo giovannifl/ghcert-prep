@@ -1,4 +1,4 @@
-name: Greeting on variable day
+name: Test Environment Variables
 
 on:
   - workflow_dispatch
