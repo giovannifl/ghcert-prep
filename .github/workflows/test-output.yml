@@ -14,7 +14,7 @@ jobs:
             printf '%s\n' "$action_state" # This will output 'yellow'
   Job-02:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name }} != 'push'
+    if:  github.event_name == 'workflow_dispatch'
     steps:
         - name: Set the value
           id: step_one
