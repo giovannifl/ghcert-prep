@@ -23,4 +23,5 @@ jobs:
           echo "event_name: $GITHUB_EVENT_NAME"
           echo "job: $GITHUB_JOB"
           echo "output: $GITHUB_OUTPUT"
-          echo "path: $GITHUB_PATH"   
+          echo "path: $GITHUB_PATH"
+          echo "os: $RUNNER_OS"   
