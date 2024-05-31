@@ -15,7 +15,8 @@ jobs:
   Job-02:
     runs-on: ubuntu-latest
     steps:
-        - name: Set the value
+        - if: ${{ github.event }} == 'push'
+          name: Set the value
           id: step_one
           run: |
             echo "state=red" >> "$GITHUB_ENV"
