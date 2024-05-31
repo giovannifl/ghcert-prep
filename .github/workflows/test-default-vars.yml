@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check2
+        env:
+          GITHUB_EVENT_NAME: $GITHUB_EVENT_NAME
+          GITHUB_JOB: $GITHUB_JOB
         run: |
-          echo ${{ github.base_ref}}
-          echo ${{ github.event_name}}     
+          echo $GITHUB_EVENT_NAME
+          echo $GITHUB_JOB   
